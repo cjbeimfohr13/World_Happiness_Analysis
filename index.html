@@ -1,175 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+
+<head>
     <title>World Happiness</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
-            </li>
-          </ul>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link -->
+    <!-- rel="stylesheet" -->
+    <!-- href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" -->
+    <!-- integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" -->
+    <!-- crossorigin="anonymous" -->
+  <!-- /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script> -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="flipping_card.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <!--navbar navbar-inverse gives you block background with white text navigation bar -->
+        <div class="container-fluid">
+        <!--container-fluid Gives you a full width container -->
+        <div class="navbar-header">
+        <!--navbar-header  Gives you a navigation header -->
+        <a class="navbar-brand" href="index.html">HOME</a>
+        <!-- navbar-brand used to set logo -->
         </div>
-      </div>
-    </nav>
-    <div class="map"></div>
-    <div class="paragraph">
-      <h1>Predicting Happiness</h1>
-      <p>Read me page</p>
-    </div>
-    <div class="row">
-      <div class="container-lg my-4">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Carousel indicators -->
-          <ol class="carousel-indicators">
+        <ul class="nav navbar-nav">
+        <!--nav navbar-nav used to sets the navigation bar size( either increase or reduce) -->
+        <!-- <li class="active"><a href="https://www.educba.com/tutorials/">EDUCBA
+        Course</a></li> -->
+        <li><a href="linear_regression.html">Linear Regression</a></li>
+        <li><a href="logistic.html">Logistic Regression</a></li>
+        </ul>
+        </div>
+        </nav>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logistic.html">Logistics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="linear_regression.html">Linear</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  aria-disabled="true"
+                  >Disabled</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
             <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>
-          <!-- Wrapper for carousel items -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="https://legal-patent.com/wp-content/uploads/2020/03/epo_corona-420x280.jpg"
-                alt="First Slide"
-              />
-              <p>the dog is cool</p>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <h1>World Happiness</h1>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="https://placehold.it/1200x400?text=IMAGE" alt="Image">
+                <div class="carousel-caption">
+                </div>
             </div>
-            <div class="carousel-item">
-              <img
-                src="https://cdn.mos.cms.futurecdn.net/mYgGsgUeqbMMYbZbTK7uP6-1200-80.jpg"
-                alt="Second Slide"
-              />
-              <p>the dog is sucks</p>
+
+            <div class="item">
+                <img src="https://placehold.it/1200x400?text=Another Image Maybe" alt="Image">
+                <div class="carousel-caption">
+                </div>
             </div>
-            <div class="carousel-item">
-              <img src="/examples/images/slide3.png" alt="Third Slide" />
-            </div>
-            <div class="carousel-item">
-              <img src="/examples/images/slide3.png" alt="Third Slide" />
-            </div>
-          </div>
-          <!-- Carousel controls -->
-          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
         </div>
-      </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
-    <div class="maincontainer">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="thecard">
-            <div class="thefront">
-              <h1>Front of Card</h1>
-              <p>
-                This is the front of the card. It contains important
-                information. Please see overleaf for more details.
-              </p>
+
+    <div class="container text-center">
+        <h3>Features List</h3><br>
+        <div class="row">
+
+            <div class="col-sm-4">
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.squarespace-cdn.com/content/v1/5936460ccd0f680fb86bf8cd/1548123488123-AP59EUDPE374KHVIVSY0/ke17ZwdGBToddI8pDm48kD86xQP5BwNG2Zfw2VyY0WZZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpygH9VVz85PUYkDcY8pfncWFKAR0go45nGE4Yvyq9g18aPvqKryJNH658egXAUfBSE/GDP+Slideshare.PNG" class="img-responsive" style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                            
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://www.pigskinsandpigtails.com/wp-content/uploads/2011/09/IMG_3826-sm-400x266.jpg" class="img-responsive" style="width:100%"
+                            alt="Image"> -->
+                            <h1>Gross Domestic Product</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="gdp.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <a href="#" class="btn btn-secondary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Link</a> -->
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+
+                        </div>
+                     
+                       
+
+                    </div>
+                </div>
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://www.niu.edu/cmalecki/_internal/_image/social-support.jpg" class="img-responsive"  style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1> -->
+                            <!-- <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://www.pigskinsandpigtails.com/wp-content/uploads/2011/09/IMG_3826-sm-400x266.jpg" class="img-responsive" style="width:100%" alt="Image"> -->
+                            <h1>Social Support</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="support.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
-            <div class="theback">
-              <h1>Back of Card</h1>
-              <p>
-                Your use of this site is subject to the terms and conditions
-                governing this and all transactions.
-              </p>
-              <button>Submit</button>
+            <div class="col-sm-4">
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://spectrum.ieee.org/image/MzI3OTA1MA.jpeg" class="img-responsive"  style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://mymodernmet.com/wp/wp-content/uploads/2020/08/smiley-face-history-0.jpg" class="img-responsive" style="width:100%" alt="Image"> -->
+                            <h1>Life Expectancy</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="life.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://12roy331nnaz22wsiq2jw2ry-wpengine.netdna-ssl.com/wp-content/uploads/2020/04/AdobeStock_303437112-scaled-e1587850238428.jpeg" class="img-responsive"  style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://mymodernmet.com/wp/wp-content/uploads/2020/08/smiley-face-history-0.jpg" class="img-responsive" style="width:100%" alt="Image"> -->
+                            <h1>Freedom of Choice</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="freedom.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
+
+            <div class="col-sm-4">
+        
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://harrisdebra51.files.wordpress.com/2019/03/generosity-1.jpg?w=640" class="img-responsive"  style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://www.pigskinsandpigtails.com/wp-content/uploads/2011/09/IMG_3826-sm-400x266.jpg" class="img-responsive" style="width:100%" alt="Image"> -->
+                            <h1>Generosity</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="generosity.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <div class="flip-card">
+
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="https://images.transparencycdn.org/images/_800x418_crop_center-center_82_none/web_home_about_what-is-corruption.PNG?mtime=1589535137" class="img-responsive"  style="height:100%" style="width:100%" alt="Image">
+                            <!-- <h1>Front</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p> -->
+                        </div>
+                        <div class="flip-card-back">
+                            <!-- <img src="https://www.pigskinsandpigtails.com/wp-content/uploads/2011/09/IMG_3826-sm-400x266.jpg" class="img-responsive" style="width:100%"
+                            alt="Image"> -->
+                            <h1>Perception of Corruption</h1>
+                            <p>
+                                Your use of this site is subject to the terms and conditions
+                                governing this and all transactions.
+                            </p>
+                            <a href="corruption.html" class="btn btn-primary" role="button" data-bs-toggle="button">Learn More</a>
+                            <!-- <button type="button" class="btn btn-success">Success</button> -->
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div class="col-sm-4">
+
+                <!-- tableau map  -->
+                <div class='tableauPlaceholder' id='viz1611290767574' style='position: relative'>
+                    <noscript>
+                        <a href='#'><img alt='World Happiness Map'
+                                src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;predicting_happiness&#47;Story1&#47;1_rss.png'
+                                style='border: none' /></a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='predicting_happiness&#47;Story1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image'
+                            value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;pr&#47;predicting_happiness&#47;Story1&#47;1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en' />
+                        <param name='filter' value='publish=yes' />
+                    </object>
+                </div>
+                <script type='text/javascript'>                    
+                    var divElement = document.getElementById('viz1611290767574'); 
+                    var vizElement = divElement.getElementsByTagName('object')[0]; 
+                    vizElement.style.width = '1016px'; vizElement.style.height = '991px'; 
+                    var scriptElement = document.createElement('script'); 
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                </script>
+                <!-- tableau map -->
+
+            </div>
+
         </div>
-        <div class="col-sm-4">
-          <div class="thecard">
-            <div class="thefront">
-              <h1>Front of Card</h1>
-              <p>
-                This is the front of the card. It contains important
-                information. Please see overleaf for more details.
-              </p>
-            </div>
+    </div><br>
 
-            <div class="theback">
-              <h1>Back of Card</h1>
-              <p>
-                Your use of this site is subject to the terms and conditions
-                governing this and all transactions.
-              </p>
-              <button>Submit</button>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="thecard">
-            <div class="thefront">
-              <h1>Front of Card</h1>
-              <p>
-                This is the front of the card. It contains important
-                information. Please see overleaf for more details.
-              </p>
-            </div>
+    <footer class="container-fluid text-center">
+        <p>Copyright © Team TECC. All Rights Reserved.</p>
+    </footer>
 
-            <div class="theback">
-              <h1>Back of Card</h1>
-              <p>
-                Your use of this site is subject to the terms and conditions
-                governing this and all transactions.
-              </p>
-              <button>Submit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
+</body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.1/d3.min.js"></script>
-  <!-- <script src="plot.js"></script> -->
 </html>
