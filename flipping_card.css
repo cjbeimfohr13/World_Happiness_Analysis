@@ -92,5 +92,12 @@ transform: rotateX(180deg);
 
 .carousel-caption{
    color: #000000;
+}
 
+.tableau-chart{
+    padding-left: 50px;
+}
+
+.tableau-text{
+    text-align:center;
 }
