@@ -30,7 +30,7 @@ https://www.kaggle.com/unsdsn/world-happiness
 
 ### Six Key Features:
 1. GDP per capita
-2. Healty life expectancy
+2. Healthy life expectancy
 3. Social Support
 4. Freedom on life choices
 5. Generosity
