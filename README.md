@@ -27,3 +27,11 @@ https://www.kaggle.com/unsdsn/world-happiness
 - Linear Regression
 - Logistic Regression
 - Deep Learning
+
+### Six Key Features:
+1. GDP per capita
+2. Healty life expectancy
+3. Social Support
+4. Freedom on life choices
+5. Generosity
+6. Perceptions of corruption
