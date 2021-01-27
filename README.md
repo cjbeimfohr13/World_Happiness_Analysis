@@ -22,6 +22,7 @@ https://www.kaggle.com/unsdsn/world-happiness
 - Seaborn
 - Tableau
 - HTML/CSS/Bootstrap
+- Plotly.Express
 
 ### Models Performed:
 - Linear Regression
