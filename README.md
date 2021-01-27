@@ -23,6 +23,7 @@ https://www.kaggle.com/unsdsn/world-happiness
 - Tableau
 - HTML/CSS/Bootstrap
 - Plotly.Express
+- JavaScript
 
 ### Models Performed:
 - Linear Regression
