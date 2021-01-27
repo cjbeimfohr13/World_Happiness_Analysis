@@ -47,8 +47,8 @@
           <img src="Images/ResidualPlot.png" alt="Avatar" style="width: 100%" />
           <div class="container">
             <div class="text">
-              <h4><b>John Doe</b></h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <h4><b>Linear Regression Model</b></h4>
+              <p>For our Linear Regression we cleaned the data and assigned values to the X and y variables. The X variable represented the six features that contributed to the happiness score while our dependent variable represented the happiness score. After we assigned our variables, we created our Linear Regression Model and split our data into Testing and Training sets in order to see if our testing data(sample) was indicative of our Training dataset. We then fit our training data into the model and then calculated the R score using model.score(). The R-Score for our Training Data was .08215 and our R-Score for the Testing Data was .6054 which was higher than the minimum score of a model. Based off of the Linear Regression Model we were able to determine that our test model had a 0.06054 chance of being able to predict the happiness score for the following year. To test how accurate our model was we used the LASSO model, Ridge model, and ElasticNet model to compare the R-Scores and also calculate the Mean Squared Error (MSE). Each of those models resulted in a R-Score of 0.605 which was similar to our Linear Regression Model so we determined it was accurate.</p>
             </div>
           </div>
         </div>
@@ -57,8 +57,8 @@
           <div class="card">
             <img id="deeplearning" src="Images/deeplearning.png" alt="Avatar" style="width: 100%" />
             <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
+              <h4><b>Deep Learning Model</b></h4>
+              <p>In the Deep Learning model, we used a combination of numpy and pandas to clean the data. Then we used sklearn to allow for testing data to be selected. Next the tensorflow libraries sequential and dense were used to create the models used for the analysis. Looking at a range of 30 Epochs we started with a model loss of 0.7235 and accuracy of 0.4786. When the 30th test was run there was significant improvement with a loss of 0.0773 and accuracy of 0.9658. When all tests finished, the Normal Neural Network loss was 0.1025 and the Accuracy was 0.9487. This Accuracy score of this model was the highest of the 3 models looked at for this Project.</p>
             </div>
           </div>
         </div>
@@ -66,8 +66,8 @@
           <div class="card">
             <img src="Images/logistics.png" alt="Avatar" style="width: 100%"/>
             <div class="container">
-              <h4><b>John Doe</b></h4>
-              <p>Architect & Engineer</p>
+              <h4><b>Logistical Regression Model</b></h4>
+              <p>For our Logistic Regression Model we wanted to categorize our countries into whether they were Happy or Unhappy. We found the mean of the Happiness Score by performing a summary statistic on the Dataframe which resulted in a mean score of 5.4. We then created a For loop to loop through all of the countries to create an additional column that stated whether the country was Happy or Unhappy. From there we created binary numbers to replace the string values using the .get_dummies() function for the happy column. We then deleted the duplicate column to organize our Dataframe. We then assigned our X and y variables using GDP and generosity for the X variable and happy column for our y variable. Our X variable needed to be turned into an array which was done using the .to_numpy() function. We then plotted the data into a scatter plot to show the score of the features in each category.  Regardless of feature score a country can still be unhappy or happy as shown in our scatter plot showing GDP and Generosity. Much like our Linear Regression Model the R-score we calculated for Training Data Score: 0.7692 and Testing Data Score: 0.7948 showing that both models performed similarly and both are able to accurately predict future Happiness Scores.r</p>
             </div>
           </div>
         </div>
