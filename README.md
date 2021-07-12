@@ -4,7 +4,7 @@ https://cjbeimfohr13.github.io/project-3/index.html
 
 ![happiness_map.png](Images/happiness_map.png)
 
-The World Hppiness Report is a Gallup World Poll survey of the state of global happiness that ranks 156 countries.
+The World Happiness Report is a Gallup World Poll survey of the state of global happiness that ranks 156 countries.
 We used the 2019 report for Project 3. The 2019 data rankings used six key variables to determine the country rankings
 of happiness.
 
